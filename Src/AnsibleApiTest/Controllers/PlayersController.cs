@@ -21,5 +21,12 @@ namespace AnsibleApiTest.Controllers
         {
             return PlayerModel.GetById(id);
         }
+
+        // POST: api/Players
+        [HttpPost]
+        public void Post([FromBody] PlayerVm player)
+        {
+            PlayerModel.Add(player);
+        }
     }
 }

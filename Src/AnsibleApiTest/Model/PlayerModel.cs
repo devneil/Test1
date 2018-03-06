@@ -30,5 +30,10 @@ namespace AnsibleApiTest.Model
         {
             return PlayerVms.FirstOrDefault(p => p.Id == id);
         }
+
+        public static void Add(PlayerVm player)
+        {
+            PlayerVms.Add(new PlayerVm(player.Id, player.Name, player.Position));
+        }
     }
 }
