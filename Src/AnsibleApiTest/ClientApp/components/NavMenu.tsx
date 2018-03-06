@@ -22,6 +22,11 @@ export class NavMenu extends React.Component<{}, {}> {
                                 <span className='glyphicon glyphicon-home'></span> Home
                             </NavLink>
                         </li>
+                        <li>
+                            <a href={'/swagger'}>
+                                <span className='glyphicon glyphicon-education'></span> API Docs
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
