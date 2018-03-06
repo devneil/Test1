@@ -14,5 +14,12 @@ namespace AnsibleApiTest.Controllers
         {
             return PlayerModel.GetAll();
         }
+
+        // GET: api/Players/5
+        [HttpGet("{id}", Name = "Get")]
+        public PlayerVm Get(int id)
+        {
+            return PlayerModel.GetById(id);
+        }
     }
 }

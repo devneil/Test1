@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using AnsibleApiTest.Controllers;
+using System.Linq;
 
 namespace AnsibleApiTest.Model
 {
@@ -24,6 +24,11 @@ namespace AnsibleApiTest.Model
         public static IEnumerable<PlayerVm> GetAll()
         {
             return PlayerVms;
+        }
+
+        public static PlayerVm GetById(int id)
+        {
+            return PlayerVms.FirstOrDefault(p => p.Id == id);
         }
     }
 }
